@@ -11,6 +11,14 @@ module.exports = {
     author: 'Mihai Slujitoru'
   },
   plugins: [
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/`,
+      },
+    },
+    `gatsby-transformer-remark`
   ]
 }
